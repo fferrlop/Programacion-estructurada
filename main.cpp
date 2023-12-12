@@ -47,5 +47,12 @@ int main() {
     struct Estudiante *punteroEst = &estudiante1;
     printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", punteroEst->nombre, punteroEst->edad, punteroEst->promedio);
 
+    typedef struct Estudiante Estudiante;
+
+    Estudiante estudiante3;
+    strcpy(estudiante3.nombre, "Pedro");
+    estudiante3.edad = 25;
+    estudiante3.promedio = 9.7;
+
     return 0;
 }
