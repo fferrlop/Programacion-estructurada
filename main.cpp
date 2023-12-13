@@ -24,6 +24,19 @@ struct Estudiante copiarEstudiante(struct Estudiante est) {
     return nuevoEst;
 }
 
+
+void imprimirEstudiante(Estudiante est) {
+    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est.nombre, est.edad, est.promedio);
+}
+
+void modificarEstudiante(Estudiante *est) {
+    est->edad = 30;
+}
+
+void imprimirEstudiante2(Estudiante *est) {
+    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est->nombre, est->edad, est->promedio);
+}
+
 int main() {
 
     union Dato dato;
@@ -56,6 +69,12 @@ int main() {
     strcpy(estudiante3.nombre, "Pedro");
     estudiante3.edad = 25;
     estudiante3.promedio = 9.7;
+
+    imprimirEstudiante(estudiante3);
+
+    modificarEstudiante(&estudiante1);
+
+    imprimirEstudiante2(&estudiante1);
 
     return 0;
 }
